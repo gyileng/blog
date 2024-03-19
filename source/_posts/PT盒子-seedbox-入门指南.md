@@ -5,7 +5,7 @@ date: 2024-03-19 13:50:18
 tags:
   - pt盒子
   - 刷流
-cover: /img/截屏2024-03-19 15.49.27.png
+cover: /img/PT盒子-seedbox-入门指南-005.png
 categories:
   - PT
 ---
