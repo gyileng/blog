@@ -44,7 +44,7 @@ categories:
 
   2. 修改**Current driver** 
 
-     ![](/img/截屏2024-03-19 15.20.57.png)
+     ![pt-001](/img/pt-001.png)
 
   3. 选择镜像，并选择大分区，其他选择默认即可
 
@@ -99,7 +99,7 @@ apt install vnstat
 
 #### 修改连接的端口号默认为45000
 
-![截屏2024-03-19 15.55.46](/Users/gy/Desktop/somethings/blog/source/img/截屏2024-03-19 15.55.46.png)
+![截屏2024-03-19 15.55.46](/img/截屏2024-03-19 15.55.46.png)
 
 ### 配置vertex
 
