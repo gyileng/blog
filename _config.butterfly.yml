@@ -230,7 +230,7 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/xxxxxx
+      link: https://github.com/gyileng
   card_announcement:
     enable: true
     content: 开心的一天
@@ -442,9 +442,9 @@ gitalk:
 # valine
 # https://valine.js.org
 valine:
-  appId: # leancloud application app id
-  appKey: # leancloud application app key
-  avatar: monsterid # gravatar style https://valine.js.org/#/avatar
+  appId: eIktOgRhCCPrOzg2Z65GrJhB-gzGzoHsz
+  appKey: aGFpJofV5qC2Qmx1jeukcmVY
+  avatar: A64ni69Dfswfv33M48oLQ7kf # gravatar style https://valine.js.org/#/avatar
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: # valine background
   visitor: false
