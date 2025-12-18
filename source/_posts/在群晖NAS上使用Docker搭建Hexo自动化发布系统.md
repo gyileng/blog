@@ -114,12 +114,8 @@ Bash
 export PATH=$PATH:/usr/local/bin:/usr/local/lib/node_modules/npm/bin
 cd /blog
 
-# 配置临时代理
-export http_proxy=http://127.0.0.1:7890
-export https_proxy=http://127.0.0.1:7890
-
 # 1. 更新代码及依赖
-git pull origin main --force
+git pull origin master
 npm install
 
 # 2. 编译
@@ -131,9 +127,6 @@ if pm2 list | grep -q "hexo-blog"; then
 else
     pm2 start "npx hexo s -p 15345" --name "hexo-blog"
 fi
-
-unset http_proxy
-unset https_proxy
 ```
 
 ### 4. hooks.json
