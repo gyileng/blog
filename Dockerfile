@@ -1,5 +1,5 @@
 # 使用 Node 18 作为基础镜像
-FROM node:18-alpine
+FROM node:18-slim
 
 # 安装 Git 和 Webhook 工具
 RUN apt-get update \
