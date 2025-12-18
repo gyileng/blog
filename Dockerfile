@@ -6,7 +6,6 @@ RUN apt-get update \
 	&& apt-get install -y git webhook \
 	&& apt-get clean \
 	&& echo "Asia/Shanghai" > /etc/timezone \
-    && echo "https://mirrors.ustc.edu.cn/alpine/v3.9/main/" > /etc/apk/repositories  \
     && npm config set registry https://registry.npm.taobao.org \
     && apk add --no-cache git \
     && npm install hexo-cli -g \    
