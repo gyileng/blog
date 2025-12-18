@@ -8,6 +8,7 @@ services:
     network_mode: bridge
     volumes:
       - .:/blog
+      - /root/.ssh:/root/.ssh:ro
     environment:
       - NODE_ENV=production
     ports:
