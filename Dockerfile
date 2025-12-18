@@ -5,7 +5,6 @@ FROM node:18-slim
 RUN apt-get update \
 	&& apt-get install -y git webhook \
 	&& apt-get clean \
-	&& chmod 777 /blog/deploy.sh
 
 # 设置工作目录
 WORKDIR /blog
