@@ -6,7 +6,8 @@ RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list && \
     sed -i 's/security.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
 
 # 安装 Git 和 Webhook 工具
-RUN apt-get install -y git webhook \
+RUN apt-get update \
+	&& apt-get install -y git webhook \
 	&& apt-get clean \
 	&& echo "Asia/Shanghai" > /etc/timezone \
     && npm config set registry https://registry.npm.taobao.org \
