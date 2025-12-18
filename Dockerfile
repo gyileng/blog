@@ -16,6 +16,4 @@ EXPOSE 9000
 # 启动 Webhook 服务
 # -verbose 开启详细日志，方便调试
 # -hotreload 允许修改 hooks.json 后自动生效
-CMD ["webhook", "-verbose", "-hooks=/blog/hooks.json", "-hotreload"]
-
-CMD ["/blog/deploy.sh"]
+CMD ["webhook", "-verbose", "-hooks=/blog/hooks.json", "-hotreload && /blog/deploy.sh"]
