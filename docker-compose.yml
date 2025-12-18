@@ -5,15 +5,12 @@ services:
   hexo-auto:
     build: .
     container_name: hexo_auto
-    network_mode: bridge
+    network_mode: host
     volumes:
       - .:/blog
       - /root/.ssh:/root/.ssh:ro
     environment:
       - NODE_ENV=production
-      - HTTP_PROXY=http://172.17.0.1:7890
-      - HTTPS_PROXY=http://172.17.0.1:7890
-    ports:
-      - "15456:9000" # Webhook 端口
-      - "15457:4000"
+      - HTTP_PROXY=http://127.0.0.1:7890
+      - HTTPS_PROXY=http://127.0.0.1:7890
     restart: always
