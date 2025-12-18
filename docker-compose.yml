@@ -11,6 +11,8 @@ services:
       - /root/.ssh:/root/.ssh:ro
     environment:
       - NODE_ENV=production
+      - HTTP_PROXY=http://172.17.0.1:7890
+      - HTTPS_PROXY=http://172.17.0.1:7890
     ports:
       - "15456:9000" # Webhook 端口
       - "15457:4000"
