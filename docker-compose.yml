@@ -3,7 +3,11 @@ version: '3'
 services:
   # 自动化后端：负责 Git + Hexo 编译 + Webhook
   hexo-auto:
-    build: .
+  build:
+    context: .
+    args:
+      - http_proxy=http://172.17.0.1:7890
+      - https_proxy=http://172.17.0.1:7890
     container_name: hexo_auto
     network_mode: bridge
     volumes:
