@@ -4,7 +4,8 @@ FROM node:18-slim
 # 安装 Git 和 Webhook 工具
 RUN apt-get update \
 	&& apt-get install -y git webhook \
-	&& apt-get clean
+	&& apt-get clean \
+	&& chmod 777 /blog/deploy.sh
 
 # 设置工作目录
 WORKDIR /blog
@@ -17,3 +18,5 @@ EXPOSE 9000
 # -verbose 开启详细日志，方便调试
 # -hotreload 允许修改 hooks.json 后自动生效
 CMD ["webhook", "-verbose", "-hooks=/blog/hooks.json", "-hotreload"]
+
+CMD ["/blog/deploy.sh"]
