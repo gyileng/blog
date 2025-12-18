@@ -10,7 +10,7 @@ RUN apt-get update \
     && npm config set registry https://registry.npm.taobao.org \
     && apk add --no-cache git \
     && npm install hexo-cli -g \    
-    && chmod 777 /build_and_run.sh
+    && chmod 777 /blog/deploy.sh
 
 # 设置工作目录
 WORKDIR /blog
