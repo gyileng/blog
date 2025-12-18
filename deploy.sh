@@ -7,7 +7,7 @@ cd /blog
 git config --global --add safe.directory /blog
 
 # 1. 拉取代码
-git pull origin main
+git pull origin master
 
 # 2. 更新依赖
 npm install
