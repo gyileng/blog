@@ -77,17 +77,7 @@ category_img:
 #  - category name: xxxxx
 category_per_img:
 
-cover:
-  # display the cover or not (是否显示文章封面)
-  index_enable: true
-  aside_enable: true
-  archives_enable: true
-  # the position of cover in home page (封面显示的位置)
-  # left/right/both
-  position: both
-  # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
-  default_cover: 
-cover:
+ cover:
   # display the cover or not (是否顯示文章封面)
   index_enable: true
   aside_enable: true
