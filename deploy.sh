@@ -5,6 +5,8 @@ export PATH=$PATH:/usr/local/bin:/usr/local/lib/node_modules/npm/bin
 cd /blog
 
 git config --global --add safe.directory /blog
+git config --global user.email "zxrgyobj@gmail.com"
+git config --global user.name "NAS-Hexo-Admin"
 
 git add . && git commit -m "update from hexo-admin" && git push
 
