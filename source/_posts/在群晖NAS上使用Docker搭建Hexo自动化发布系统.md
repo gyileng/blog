@@ -1,13 +1,12 @@
----
 title: 在群晖NAS上使用Docker搭建Hexo自动化发布系统
 toc: true
-date: 2025-12-18 22:01:50
 tags:
   - 群辉
   - NAS
-cover:
 categories:
   - 教程
+date: 2025-12-18 14:01:00
+cover:
 ---
 
 # 在群晖 NAS 上使用 Docker 搭建 Hexo 自动化发布系统
