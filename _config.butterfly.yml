@@ -87,8 +87,18 @@ cover:
   position: both
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover: 
-    - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
+cover:
+  # display the cover or not (是否顯示文章封面)
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  # the position of cover in home page (封面顯示的位置)
+  # left/right/both
+  position: both
+  # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
+  default_cover:
     - https://images.unsplash.com/photo-1501785888041-af3ef285b470
+    - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
     - https://images.unsplash.com/photo-1470770841072-f978cf4d019e
     - https://images.unsplash.com/photo-1500534314209-a25ddb2bd429
     - https://images.unsplash.com/photo-1500534623283-312aade485b7
