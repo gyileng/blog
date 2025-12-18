@@ -6,11 +6,21 @@ cd /blog
 
 git config --global --add safe.directory /blog
 
-# 1. 拉取代码
-git pull origin master
+git add . && git commit -m "update from hexo-admin" && git push
 
-# 2. 更新依赖
-npm install
+# 1. 只有当有文件变动时才提交（防止报错中断）
+if [[ -n $(git status -s) ]]; then
+    echo "Detected local changes from hexo-admin, pushing to GitHub..."
+    git add .
+    git commit -m "update from hexo-admin at $(date)"
+    git push origin master
+else
+    echo "No local changes to push."
+fi
+
+# 2. 拉取远程更新（处理你在本地电脑提交的情况）
+# 使用 rebase 可以让提交记录更整洁
+git pull --rebase origin master
 
 # 3. 编译并使用 PM2 重启服务
 npx hexo g
