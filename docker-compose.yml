@@ -1,16 +1,13 @@
 version: '3'
 
 services:
-  # 自动化后端：负责 Git + Hexo 编译 + Webhook
-  hexo-auto:
+  hexo-standalone:
     build: .
-    container_name: hexo_auto
-    network_mode: host
+    container_name: hexo_standalone
+    network_mode: host  # 使用 Host 模式
+    environment:
+      - http_proxy=http://127.0.0.1:7890
+      - https_proxy=http://127.0.0.1:7890
     volumes:
       - .:/blog
-      - /root/.ssh:/root/.ssh:ro
-    environment:
-      - NODE_ENV=production
-      - HTTP_PROXY=http://127.0.0.1:7890
-      - HTTPS_PROXY=http://127.0.0.1:7890
     restart: always
