@@ -1,0 +1,18 @@
+[
+  {
+    "id": "redeploy-blog",
+    "execute-command": "/blog/deploy.sh",
+    "command-working-directory": "/blog",
+    "response-message": "Starting deployment...",
+    "trigger-rule": {
+      "match": {
+        "type": "payload-hash-sha1",
+        "secret": "6f76f8d9e6b66dee79e1ceb86f7db4d7d7367ba7b9edbdbd",
+        "parameter": {
+          "source": "header",
+          "name": "X-Hub-Signature"
+        }
+      }
+    }
+  }
+]

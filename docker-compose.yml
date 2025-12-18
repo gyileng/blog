@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  # 自动化后端：负责 Git + Hexo 编译 + Webhook
+  hexo-auto:
+    build: .
+    container_name: hexo_auto
+    network_mode: bridge
+    volumes:
+      - .:/blog
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "15456:9000" # Webhook 端口
+      - "15457:4000"
+    restart: always
