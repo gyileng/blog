@@ -1,5 +1,7 @@
 #!/bin/bash
 echo "--- Starting Update: $(date) ---"
+# 显式添加常用的二进制路径
+export PATH=$PATH:/usr/local/bin:/usr/local/lib/node_modules/npm/bin
 cd /blog
 
 git config --global --add safe.directory /blog
