@@ -1,9 +1,12 @@
 # 使用 Node 18 作为基础镜像
 FROM node:18-slim
 
+# 更换为阿里云镜像源 (针对 Debian 11/12)
+RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list && \
+    sed -i 's/security.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
+
 # 安装 Git 和 Webhook 工具
-RUN apt-get update \
-	&& apt-get install -y git webhook \
+RUN apt-get install -y git webhook \
 	&& apt-get clean \
 	&& echo "Asia/Shanghai" > /etc/timezone \
     && npm config set registry https://registry.npm.taobao.org \
