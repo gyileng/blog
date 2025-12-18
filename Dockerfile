@@ -11,7 +11,6 @@ RUN apt-get update \
 	&& apt-get clean \
 	&& echo "Asia/Shanghai" > /etc/timezone \
     && npm config set registry https://registry.npm.taobao.org \
-    && apk add --no-cache git \
     && npm install hexo-cli -g \    
     && chmod 777 /blog/deploy.sh
 
