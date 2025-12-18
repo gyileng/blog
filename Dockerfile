@@ -4,11 +4,7 @@ FROM node:18-slim
 # 安装 Git 和 Webhook 工具
 RUN apt-get update \
 	&& apt-get install -y git webhook \
-	&& apt-get clean \
-	&& echo "Asia/Shanghai" > /etc/timezone \
-    && npm config set registry https://registry.npm.taobao.org \
-    && npm install hexo-cli -g \    
-    && chmod 777 /blog/deploy.sh
+	&& apt-get clean
 
 # 设置工作目录
 WORKDIR /blog
