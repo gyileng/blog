@@ -109,3 +109,9 @@ admin:
   username: baiwei
   password_hash: $2a$10$.BKJblqEmmInmHyakmBbR.TlInjz5CilthJhVeHzjdfaHSyBfgwHe
   secret: This is used to encrypt cookies; make it long and obscure
+ 
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
