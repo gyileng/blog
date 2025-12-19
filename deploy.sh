@@ -25,6 +25,7 @@ fi
 git pull --rebase origin master
 
 # 3. 编译并使用 PM2 重启服务
+npx hexo clean
 npx hexo g
 
 # 检查进程是否已在运行，如果运行中则 restart，否则 start
