@@ -252,7 +252,7 @@ aside:
       link: https://github.com/gyileng
   card_announcement:
     enable: true
-    content: 开心的一天
+    content: 人生苦短，及时行乐！
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -383,7 +383,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   # Preload the search data when the page loads.
   preload: false
   # Show top n results per article, show all results by setting to -1
@@ -782,7 +782,7 @@ subtitle:
   source: false
   # 如果关闭打字效果，subtitle 只会显示 sub 的第一行文字
   sub:
-    - 山不向我走来，我便向山走去。
+    - 该吃吃，该喝喝，啥事别往心里搁。
 
 # Loading Animation (加载动画)
 preloader:
