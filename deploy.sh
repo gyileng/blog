@@ -29,7 +29,7 @@ npx hexo clean
 npx hexo g
 
 # 检查进程是否已在运行，如果运行中则 restart，否则 start
-if pm2 list | grep -q "hexo-blog"; then
+if pm2 list | grep "hexo-blog"; then
     echo "Task exists, restarting..."
     pm2 restart "hexo-blog"
 else
