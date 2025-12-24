@@ -25,8 +25,25 @@ fi
 git pull --rebase
 
 # 3. 编译并使用 PM2 重启服务
+echo "Checking for existing Hexo service on port 15345..."
+PID=$(lsof -t -i:15345)
+
+if [ -z "$PID" ]; then
+    echo "No running service found on port 15345."
+else
+    echo "Found existing service (PID: $PID). Killing it..."
+    kill -9 $PID
+    # 给系统一点时间释放端口
+    sleep 1
+fi
+
+# 2. 编译
+echo "Cleaning and generating..."
 npx hexo clean
 npx hexo g
+
+# 3. 启动新服务
+echo "Starting Hexo service in background..."
 npx hexo s -p 15345 &
 
 echo "--- Update Complete: $(date) ---"
