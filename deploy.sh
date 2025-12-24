@@ -44,6 +44,6 @@ npx hexo g
 
 # 3. 启动新服务
 echo "Starting Hexo service in background..."
-npx hexo s -p 15345 &
+nohup npx hexo s -p 15345 > /dev/null 2>&1 &
 
 echo "--- Update Complete: $(date) ---"
