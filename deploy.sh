@@ -27,14 +27,6 @@ git pull --rebase
 # 3. 编译并使用 PM2 重启服务
 npx hexo clean
 npx hexo g
-
-# 检查进程是否已在运行，如果运行中则 restart，否则 start
-if pm2 list | grep "hexo-blog"; then
-    echo "Task exists, restarting..."
-    pm2 restart "hexo-blog"
-else
-    echo "Task not found, starting new one..."
-    pm2 start "npx hexo s -p 15345" --name "hexo-blog"
-fi
+npx hexo s -p 15345 &
 
 echo "--- Update Complete: $(date) ---"
