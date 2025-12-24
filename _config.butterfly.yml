@@ -252,7 +252,7 @@ aside:
       link: https://github.com/gyileng
   card_announcement:
     enable: true
-    content: 人生苦短，及时行乐！
+    content: <b>人生苦短，及时行乐！</b><br><br><iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/90883049/latest-rides/e37c2950eeae20fb88dc6c71cf9277ee3f05d314'></iframe>
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
