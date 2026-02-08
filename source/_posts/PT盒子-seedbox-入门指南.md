@@ -5,7 +5,7 @@ date: 2024-03-19 13:50:18
 tags:
   - pt盒子
   - 刷流
-cover: /img/PT盒子-seedbox-入门指南-005.png
+cover: /source/img/PT盒子-seedbox-入门指南-005.png
 categories:
   - PT
 ---
@@ -44,13 +44,13 @@ categories:
 
   2. 修改**Current driver** 
 
-     ![pt-001](/img/PT盒子-seedbox-入门指南-001.png)
+     ![pt-001](/source/img/PT盒子-seedbox-入门指南-001.png)
 
   3. 选择镜像，并选择大分区，其他选择默认即可
 
-     ![pt-008](/img/PT盒子-seedbox-入门指南-008.png))
+     ![pt-008](/source/img/PT盒子-seedbox-入门指南-008.png))
 
-     ![pt-009](/img/PT盒子-seedbox-入门指南-009.png)
+     ![pt-009](/source/img/PT盒子-seedbox-入门指南-009.png)
 
   4. 输入登录密码，点击reinstall
 
@@ -95,11 +95,11 @@ apt install vnstat
 
 主要修改界面语言和访问端口，端口可用默认8080不修改
 
-![pt-003](/img/PT盒子-seedbox-入门指南-003.png)
+![pt-003](/source/img/PT盒子-seedbox-入门指南-003.png)
 
 #### 修改连接的端口号默认为45000
 
-![pt-002](/img/PT盒子-seedbox-入门指南-002.png)
+![pt-002](/source/img/PT盒子-seedbox-入门指南-002.png)
 
 ### 配置vertex
 
@@ -115,9 +115,9 @@ rss规则同上，可以留言获取
 
 #### 添加下载器
 
-![pt-007](/img/PT盒子-seedbox-入门指南-007.png)
+![pt-007](/source/img/PT盒子-seedbox-入门指南-007.png)
 
-![pt-006](/img/PT盒子-seedbox-入门指南-006.png)
+![pt-006](/source/img/PT盒子-seedbox-入门指南-006.png)
 
 #### 添加RSS任务
 
@@ -127,13 +127,13 @@ RSS站点比较多，针对不同站点有不同的规则，有需要可以留�
 
 以下是我刷流的一些数据。
 
-![pt-005](/img/PT盒子-seedbox-入门指南-005.png)
+![pt-005](/source/img/PT盒子-seedbox-入门指南-005.png)
 
 因为最近一直再折腾，数据不是很稳定。
 
 #### 开启数据统计
 
-![pt-004](/img/PT盒子-seedbox-入门指南-004.png)
+![pt-004](/source/img/PT盒子-seedbox-入门指南-004.png)
 
 这样就可以在首页看到统计的数据了。
 

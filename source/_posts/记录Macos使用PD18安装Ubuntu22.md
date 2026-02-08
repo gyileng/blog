@@ -35,7 +35,7 @@ categories:
 
 我选择的是第一种，选择之后它会自己安装和下载。
 
-![1703139181612](/img/1703139181612.jpg)
+![1703139181612](/source/source/img/1703139181612.jpg)
 
 安装完成之后会提示输入新的系统密码，因为我已经安装过了，没有截图，设置一个常用密码即可。之后就可以进入系统。
 
@@ -80,7 +80,7 @@ deb-src https://mirrors.aliyun.com/ubuntu-ports/ focal-backports main restricted
 
 默认配置选择的是**共享网络**
 
-![1703140559778](/img/1703140559778.jpg)
+![1703140559778](/source/source/img/1703140559778.jpg)
 
 如果想使用宿主机的代理，那么需要简单配置一下
 
@@ -88,11 +88,11 @@ deb-src https://mirrors.aliyun.com/ubuntu-ports/ focal-backports main restricted
 
 2. 打开系统设置修改系统代理
 
-   ![1703140679913](/img/1703140679913.jpg)
+   ![1703140679913](/source/source/img/1703140679913.jpg)
 
    将代理ip改为宿主机的内网ip，端口填宿主机代理的端口即可
 
-   ![1703140774037](/img/1703140774037.jpg)
+   ![1703140774037](/source/source/img/1703140774037.jpg)
 
    这样网络配置就完成了。
 

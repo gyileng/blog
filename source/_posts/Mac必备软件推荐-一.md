@@ -34,7 +34,7 @@ Clash是一个使用Go语言编写，基于规则的跨平台DL软件核心程�
 
 5. **选中我们刚刚订阅生成的配置文件**
 
-   ![clashx](/img/clashx.png)
+   ![clashx](/source/img/clashx.png)
 
 6. **启动**
 
