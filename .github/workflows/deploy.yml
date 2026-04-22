@@ -21,22 +21,16 @@ jobs:
           echo "${{ secrets.NAS_SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           cat >> ~/.ssh/config <<EOF
-          Host nas-tunnel
-            HostName 127.0.0.1
-            Port 2222
+          Host nas
+            HostName ssh.baiwei.site
             StrictHostKeyChecking no
             User baiwei
-            IdentityFile ~/.ssh/id_rsa
+            ProxyCommand cloudflared access ssh --hostname %h
           EOF
-
-      - name: Start cloudflared tunnel
-        run: |
-          cloudflared access tcp --hostname ssh.baiwei.site --url localhost:2222 &
-          sleep 3
 
       - name: Deploy
         run: |
-          ssh nas-tunnel << 'ENDSSH'
+          ssh nas << 'ENDSSH'
             set -e
             cd /var/services/homes/baiwei/documents/blog
             git pull
