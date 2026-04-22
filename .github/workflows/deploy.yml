@@ -10,21 +10,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install cloudflared
+        run: |
+          curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb -o cloudflared.deb
+          sudo dpkg -i cloudflared.deb
+
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.NAS_SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           cat >> ~/.ssh/config <<EOF
-          Host ssh.baiwei.site
+          Host nas-tunnel
+            HostName 127.0.0.1
+            Port 2222
             StrictHostKeyChecking no
             User baiwei
             IdentityFile ~/.ssh/id_rsa
           EOF
 
+      - name: Start cloudflared tunnel
+        run: |
+          cloudflared access tcp --hostname ssh.baiwei.site --url localhost:2222 &
+          sleep 3
+
       - name: Deploy
         run: |
-          ssh baiwei@ssh.baiwei.site << 'ENDSSH'
+          ssh nas-tunnel << 'ENDSSH'
             set -e
             cd /var/services/homes/baiwei/documents/blog
             git pull
