@@ -46,6 +46,10 @@ cover: /img/cover.png
 
 固定链接由 front-matter 中的 `date` 和 `title` 决定，修改任意一项都会导致已有链接失效。
 
+## 写作规范
+
+- 新文章内容一律使用**中文**撰写
+
 ## 主题与配置说明
 
 - 当前主题：`butterfly`（在 `_config.yml` 中配置；`_config.landscape.yml` 未启用）
