@@ -30,9 +30,9 @@ jobs:
 
       - name: Deploy
         run: |
-          ssh baiwei@ssh.baiwei.site << 'ENDSSH'
+          ssh -v baiwei@ssh.baiwei.site << 'ENDSSH'
             set -e
             cd /var/services/homes/baiwei/documents/blog
             git pull
-            docker-compose restart
+            sudo docker-compose restart
           ENDSSH
