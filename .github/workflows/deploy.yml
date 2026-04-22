@@ -8,9 +8,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      CF_ACCESS_CLIENT_ID: ${{ secrets.CF_ACCESS_CLIENT_ID }}
-      CF_ACCESS_CLIENT_SECRET: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
 
     steps:
       - name: Install cloudflared
@@ -33,10 +30,6 @@ jobs:
             IdentityFile ~/.ssh/id_rsa
             BatchMode yes
           EOF
-
-      - name: Verify tunnel connectivity
-        run: |
-          ssh -T -o ConnectTimeout=30 nas 'exit'
 
       - name: Deploy
         run: |
