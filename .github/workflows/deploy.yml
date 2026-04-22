@@ -36,6 +36,7 @@ jobs:
         run: |
           ssh -T nas '
             set -e
+            export PATH=$PATH:/usr/local/git/bin:/usr/bin:/usr/local/bin
             cd /var/services/homes/baiwei/documents/blog
             git pull
             sudo docker-compose restart
