@@ -3,12 +3,12 @@ version: '3'
 services:
   hexo-standalone:
     build: .
-    container_name: hexo_standalone
+    container_name: blog
     network_mode: host  # 使用 Host 模式
     environment:
       - http_proxy=http://127.0.0.1:7890
       - https_proxy=http://127.0.0.1:7890
     volumes:
-      - .:/blog
+      - /var/services/homes/baiwei/documents/blog:/blog
       - /root/.ssh:/root/.ssh
     restart: always
