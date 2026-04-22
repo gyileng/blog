@@ -8,6 +8,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      CF_ACCESS_CLIENT_ID: ${{ secrets.CF_ACCESS_CLIENT_ID }}
+      CF_ACCESS_CLIENT_SECRET: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
 
     steps:
       - name: Install cloudflared
@@ -17,6 +20,7 @@ jobs:
 
       - name: Setup SSH
         run: |
+          set -eu
           mkdir -p ~/.ssh
           echo "${{ secrets.NAS_SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
@@ -27,13 +31,18 @@ jobs:
             User baiwei
             ProxyCommand cloudflared access ssh --hostname %h
             IdentityFile ~/.ssh/id_rsa
+            BatchMode yes
           EOF
+
+      - name: Verify tunnel connectivity
+        run: |
+          ssh -T -o ConnectTimeout=30 nas 'exit'
 
       - name: Deploy
         run: |
-          ssh nas << 'ENDSSH'
+          ssh -T nas '
             set -e
             cd /var/services/homes/baiwei/documents/blog
             git pull
             sudo docker-compose restart
-          ENDSSH
+          '
