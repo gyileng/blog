@@ -26,6 +26,7 @@ jobs:
             StrictHostKeyChecking no
             User baiwei
             ProxyCommand cloudflared access ssh --hostname %h
+            IdentityFile ~/.ssh/id_rsa
           EOF
 
       - name: Deploy
