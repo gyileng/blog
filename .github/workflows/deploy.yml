@@ -10,11 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Install cloudflared
-        run: |
-          curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb -o cloudflared.deb
-          sudo dpkg -i cloudflared.deb
-
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
@@ -22,7 +17,6 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           cat >> ~/.ssh/config <<EOF
           Host ssh.baiwei.site
-            ProxyCommand cloudflared access ssh --hostname %h
             StrictHostKeyChecking no
             User baiwei
             IdentityFile ~/.ssh/id_rsa
@@ -30,7 +24,7 @@ jobs:
 
       - name: Deploy
         run: |
-          ssh -v baiwei@ssh.baiwei.site << 'ENDSSH'
+          ssh baiwei@ssh.baiwei.site << 'ENDSSH'
             set -e
             cd /var/services/homes/baiwei/documents/blog
             git pull
