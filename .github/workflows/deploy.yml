@@ -37,8 +37,8 @@ jobs:
           ssh -T nas '
             set -e
             export PATH=$PATH:/usr/local/git/bin:/usr/bin:/usr/local/bin
-            git config --global --add safe.directory /volume1/homes/baiwei/documents/blog
-            cd /var/services/homes/baiwei/documents/blog
-            git pull
+            sudo git config --global --add safe.directory /volume1/homes/baiwei/documents/blog
+            cd /volume1/homes/baiwei/documents/blog
+            sudo git pull
             sudo docker-compose restart
           '
