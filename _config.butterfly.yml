@@ -40,21 +40,21 @@ social:
 # --------------------------------------
 
 # Favicon（网站图标）
-favicon: /img/favicon.png
+favicon: https://img.baiwei.site/img/favicon.png
 
 # Avatar (头像)
 avatar:
-  img: /img/avatar.jpg
+  img: https://img.baiwei.site/img/avatar.jpg
   effect: false
 
 # Disable all banner image
 disable_top_img: false
 
 # The banner image of home page
-index_img: /img/cover_1.jpg
+index_img: https://img.baiwei.site/img/cover_1.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: /img/top.png
+default_top_img: https://img.baiwei.site/img/top.png
 
 # The banner image of archive page
 archive_img:
@@ -87,36 +87,24 @@ category_per_img:
   position: both
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover:
-    - https://images.unsplash.com/photo-1501785888041-af3ef285b470
-    - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
-    - https://images.unsplash.com/photo-1470770841072-f978cf4d019e
-    - https://images.unsplash.com/photo-1500534314209-a25ddb2bd429
-    - https://images.unsplash.com/photo-1500534623283-312aade485b7
-    - https://images.unsplash.com/photo-1519681393784-d120267933ba
-    - https://images.unsplash.com/photo-1502134249126-9f3755a50d78
-    - https://images.unsplash.com/photo-1464822759023-fed622ff2c3b
-    - https://images.unsplash.com/photo-1500530855697-b586d89ba3ee
-    - https://images.unsplash.com/photo-1501785888041-af3ef285b470
-    - https://images.unsplash.com/photo-1519681393784-d120267933ba
-    - https://images.unsplash.com/photo-1470770841072-f978cf4d019e
-    - https://images.unsplash.com/photo-1501785888041-af3ef285b470
-    - https://images.unsplash.com/photo-1469474968028-56623f02e42e
-    - https://images.unsplash.com/photo-1500534623283-312aade485b7
-    - https://images.unsplash.com/photo-1472214103451-9374bd1c798e
+    - https://img.baiwei.site/img/chapter_data_structure.jpg
+    - https://img.baiwei.site/img/chapter_array_and_linkedlist.jpg
+    - https://img.baiwei.site/img/synology.jpeg
+    - https://img.baiwei.site/img/marathon.png
 
 
 
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
-  flink: /img/friend_404.gif
-  post_page: /img/404.jpg
+  flink: https://img.baiwei.site/img/friend_404.gif
+  post_page: https://img.baiwei.site/img/404.jpg
 
 # A simple 404 page
 error_404:
   enable: false
   subtitle: 'Page Not Found'
-  background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
+  background:
 
 post_meta:
   page: # Home Page
@@ -183,10 +171,10 @@ reward:
   enable: false
   text:
   QR_code:
-    # - img: /img/wechat.jpg
+    # - img: https://img.baiwei.site/img/wechat.jpg
     #   link:
     #   text: wechat
-    # - img: /img/alipay.jpg
+    # - img: https://img.baiwei.site/img/alipay.jpg
     #   link:
     #   text: alipay
 
@@ -678,7 +666,7 @@ enter_transitions: true
 # Typewriter Effect (打字效果)
 # https://github.com/disjukr/activate-power-mode
 activate_power_mode:
-  enable: true
+  enable: false
   colorful: true # open particle animation (冒光特效)
   shake: true #  open shake (抖动特效)
   mobile: false
@@ -698,7 +686,7 @@ canvas_ribbon:
 
 # Fluttering Ribbon (动态彩带)
 canvas_fluttering_ribbon:
-  enable: true
+  enable: false
   mobile: false
 
 # canvas_nest
@@ -860,7 +848,7 @@ note:
 # It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
 pjax:
-  enable: false
+  enable: true
   exclude:
     # - xxxx
     # - xxxx
@@ -882,7 +870,7 @@ snackbar:
 
 # https://instant.page/
 # prefetch (预加载)
-instantpage: false
+instantpage: true
 
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之间添加空格)
@@ -893,7 +881,7 @@ pangu:
 # Lazyload (图片懒加载)
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
-  enable: false
+  enable: true
   field: site # site/post
   placeholder:
   blur: false
