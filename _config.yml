@@ -113,5 +113,18 @@ admin:
 search:
   path: search.xml
   field: post
-  content: true
+  content: false
   format: html
+
+minify:
+  js:
+    enable: true
+    exclude:
+      - '*.min.js'
+  css:
+    enable: true
+    exclude:
+      - '*.min.css'
+  html:
+    enable: true
+    exclude: []
